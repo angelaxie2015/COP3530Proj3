@@ -1,26 +1,3 @@
-# import pandas as pd
-# from pytrends.request import TrendReq
-
-# pytrends = TrendReq(hl='en-US-state', tz=360)
-
-
-# pytrend = TrendReq(hl='en-US', tz=360)
-# keywords = ['super mario', 'fortnite', 'pokemon', 'pubg','moderna stock']
-# kw_list=keywords
-
-
-# pytrend.build_payload(
-#      kw_list=keywords,
-#      cat=0,
-#      timeframe='today 5-y',
-#      geo='US-FL',
-#      gprop='')
-# #data = pytrend.interest_over_time()
-
-# data = pytrend.get_historical_interest(kw_list, year_start=2018, month_start=1, day_start=1, hour_start=0, year_end=2018, month_end=2, day_end=1, hour_end=0, cat=0, geo='', gprop='', sleep=0)
-
-
-# data.to_csv('Py_VS_R.csv', encoding='utf_8_sig')
 
 from pytrends.request import TrendReq
 import pandas as pd
@@ -603,7 +580,7 @@ for x in range(0, len(df2)):
 
 result = pd.concat(dataset, axis=1, keys=stateName)
 
-result.to_csv('search_trends.csv')
+result.to_csv('search_trends2.csv')
 
 
 
