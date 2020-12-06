@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/angelaxie/CLionProjects/COP3530Proj3/Data.cpp">
+			<Option target="Minesweeper"/>
+		</Unit>
+		<Unit filename="/Users/angelaxie/CLionProjects/COP3530Proj3/Data.h">
+			<Option target="Minesweeper"/>
+		</Unit>
+		<Unit filename="/Users/angelaxie/CLionProjects/COP3530Proj3/Game.cpp">
+			<Option target="Minesweeper"/>
+		</Unit>
+		<Unit filename="/Users/angelaxie/CLionProjects/COP3530Proj3/Game.h">
+			<Option target="Minesweeper"/>
+		</Unit>
 		<Unit filename="/Users/angelaxie/CLionProjects/COP3530Proj3/main.cpp">
 			<Option target="Minesweeper"/>
 		</Unit>

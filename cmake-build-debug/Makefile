@@ -123,6 +123,60 @@ Minesweeper/fast:
 	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/build
 .PHONY : Minesweeper/fast
 
+Data.o: Data.cpp.o
+
+.PHONY : Data.o
+
+# target to build an object file
+Data.cpp.o:
+	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Data.cpp.o
+.PHONY : Data.cpp.o
+
+Data.i: Data.cpp.i
+
+.PHONY : Data.i
+
+# target to preprocess a source file
+Data.cpp.i:
+	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Data.cpp.i
+.PHONY : Data.cpp.i
+
+Data.s: Data.cpp.s
+
+.PHONY : Data.s
+
+# target to generate assembly for a file
+Data.cpp.s:
+	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Data.cpp.s
+.PHONY : Data.cpp.s
+
+Game.o: Game.cpp.o
+
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Minesweeper"
+	@echo "... Data.o"
+	@echo "... Data.i"
+	@echo "... Data.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,12 +1,23 @@
-//
-// Created by Angela Xie on 12/5/20.
-//
+#include "iostream"
+#include "string"
+#include "unordered_map"
+#include "vector"
+using namespace std;
 
 #ifndef COP3530PROJ3_GAME_H
 #define COP3530PROJ3_GAME_H
 
 
-class game {
+class Game {
+
+
+public:
+    string gameName;
+    string state;
+    string date;
+    int count;
+    Game(string _gameName, string _state, string _date, int _count);
+    void print();
 
 };
 

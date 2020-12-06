@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="COP3530Proj3" targetName="COP3530Proj3" />
+      <config projectName="COP3530Proj3" targetName="Minesweeper" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,14 +12,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bfd39c3-8c68-4774-a84a-6540a19b1d73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/COP3530Proj3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COP3530Proj3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Data.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Minesweeper.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/COP3530Proj3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/COP3530Proj3.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/keyword_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/project3/keyword_list.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606798499279</updated>
       <workItem from="1606798507271" duration="3000" />
-      <workItem from="1607181756609" duration="784000" />
+      <workItem from="1607181756609" duration="7992000" />
+      <workItem from="1607261616811" duration="3860000" />
     </task>
     <servers />
   </component>
@@ -86,9 +96,46 @@
       <screen x="31" y="23" width="1409" height="877" />
     </state>
     <state x="321" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/31.23.1409.877@31.23.1409.877" timestamp="1607182479342" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1606798506312">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1367" height="159" key="GridCell.Tab.0.bottom" timestamp="1607265546002">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="159" key="GridCell.Tab.0.bottom/31.23.1409.877@31.23.1409.877" timestamp="1607265546002" />
+    <state width="1367" height="159" key="GridCell.Tab.0.center" timestamp="1607265546001">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="159" key="GridCell.Tab.0.center/31.23.1409.877@31.23.1409.877" timestamp="1607265546001" />
+    <state width="1367" height="159" key="GridCell.Tab.0.left" timestamp="1607265546001">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="159" key="GridCell.Tab.0.left/31.23.1409.877@31.23.1409.877" timestamp="1607265546001" />
+    <state width="1367" height="159" key="GridCell.Tab.0.right" timestamp="1607265546002">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="159" key="GridCell.Tab.0.right/31.23.1409.877@31.23.1409.877" timestamp="1607265546002" />
+    <state width="1367" height="234" key="GridCell.Tab.1.bottom" timestamp="1607262666834">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="234" key="GridCell.Tab.1.bottom/31.23.1409.877@31.23.1409.877" timestamp="1607262666834" />
+    <state width="1367" height="234" key="GridCell.Tab.1.center" timestamp="1607262666832">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="234" key="GridCell.Tab.1.center/31.23.1409.877@31.23.1409.877" timestamp="1607262666832" />
+    <state width="1367" height="234" key="GridCell.Tab.1.left" timestamp="1607262666832">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="234" key="GridCell.Tab.1.left/31.23.1409.877@31.23.1409.877" timestamp="1607262666832" />
+    <state width="1367" height="234" key="GridCell.Tab.1.right" timestamp="1607262666833">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state width="1367" height="234" key="GridCell.Tab.1.right/31.23.1409.877@31.23.1409.877" timestamp="1607262666833" />
+    <state x="419" y="298" key="com.intellij.ide.util.TipDialog" timestamp="1607261644580">
+      <screen x="31" y="23" width="1409" height="877" />
     </state>
     <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1606798506312" />
+    <state x="419" y="298" key="com.intellij.ide.util.TipDialog/31.23.1409.877@31.23.1409.877" timestamp="1607261644580" />
+    <state x="449" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1607263388631">
+      <screen x="31" y="23" width="1409" height="877" />
+    </state>
+    <state x="449" y="224" width="670" height="676" key="search.everywhere.popup/31.23.1409.877@31.23.1409.877" timestamp="1607263388631" />
   </component>
 </project>
