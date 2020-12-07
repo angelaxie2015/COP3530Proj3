@@ -168,7 +168,7 @@ void loadFile(const string fileName, Data& d){ //reading the file and inserting 
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    //std::cout << "Hello, World!" << std::endl;
     string loc = "../project3/search_trends7.csv";
     Data data;
 
