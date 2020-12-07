@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/angelaxie/CLionProjects/COP3530Proj3/Data.cpp
-Data.h
-/Users/angelaxie/CLionProjects/COP3530Proj3/Data.h
-
 /Users/angelaxie/CLionProjects/COP3530Proj3/Data.h
 Game.h
 /Users/angelaxie/CLionProjects/COP3530Proj3/Game.h
 unordered_map
 -
-
-/Users/angelaxie/CLionProjects/COP3530Proj3/Game.cpp
-Game.h
-/Users/angelaxie/CLionProjects/COP3530Proj3/Game.h
 
 /Users/angelaxie/CLionProjects/COP3530Proj3/Game.h
 iostream

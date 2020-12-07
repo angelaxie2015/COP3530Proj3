@@ -18,7 +18,6 @@ vector<Game> bubbleSort(vector<Game> targetVec) {
                 swapped = 1;
             }
         }
-
         if (swapped == 0)
             break;
     }
@@ -116,11 +115,10 @@ vector<Game> heapSort (vector<Game>& data) {
     return data;
 }
 
-void loadFile(const string fileName, Data& d){ //reading the file and inserting it into Data
+void loadFile(const string fileName, Data& d, vector<string>& dates){ //reading the file and inserting it into Data
     ifstream file;
     file.open(fileName);
     string fileInput;
-    vector<string> dates;
 
     //1. storing the dates in a date vector
     getline(file, fileInput);
@@ -174,25 +172,100 @@ int main() {
     Data data;
 
     //1. read file and store in an array of games
-    loadFile(loc, data);
-
-    vector<Game> temp = data.getStateDateCount("FL", "9/1/11");
- //   temp = data.getstate("FL");
+    vector<string> dates;
+    loadFile(loc, data, dates);
 
 
-    temp = heapSort(temp);
+    /*
+    //2. sort
+    cout << "Which state do you want to take a look at?" << endl;
+    string state;
+    cin >> state;
 
-  // vector<Game> temp = data.getDateCount("6/1/19");
-    for(Game& g: temp)
-        g.print();
+    vector<Game> givenState = data.getstate(state);
 
+    clock_t t;
+    t = clock();
+    printf ("Calculating...\n");
+    vector<Game> heapsortList = heapSort(givenState); //sorting using heapsort
+    t = clock() - t;
+    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do heap sort." << endl;
 
-    //2. use a map to match index with game name & have a vector of counts
+    vector<Game> bubblesortList = bubbleSort(givenState); //sorting using bubble sort
+    t = clock() - t;
+    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do bubble sort." << endl;
 
-    //3. sort
+    vector<Game> insertionList = insertionSort(givenState);
+    t = clock() - t;
+    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do insertion sort." << endl;
 
-    //4. display
+    vector<Game> selectionList = selectionSort(givenState);
+    t = clock() - t;
+    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do selection sort." << endl;
+
+    vector<Game> quicklist = quickSort(givenState, 0 , givenState.size() - 1);
+    t = clock() - t;
+    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do quick sort." << endl;
+
+    cout << "Highes search is " << quicklist[quicklist.size() - 1].gameName << " on " << quicklist[quicklist.size() - 1].date << " with " << quicklist[quicklist.size() - 1].count << " searches." << endl;
+
+     */
+
+    //3. display
     sf::RenderWindow window(sf::VideoMode(800, 600), "GoogleTrends");
+
+    window.setFramerateLimit(10); //setting framerate to be slower.
+
+    while (window.isOpen())
+    {
+        // check all the window's events that were triggered since the last iteration of the loop
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            // "close requested" event: we close the window
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        // clear the window with black color
+        //sf::Color color = d0e8f2;
+        window.clear(sf::Color::Black);
+
+        sf::Text text;
+        sf::Font font;
+        if (!font.loadFromFile("1574926762.ttf"))
+        {
+            cout << "Error" << endl;
+        }
+
+        text.setString("Hello World");
+        text.setFont(font);
+        text.setCharacterSize(20);
+        text.setStyle(sf::Text::Bold);
+        text.setColor(sf::Color::White);
+        text.setPosition(50,50);
+        window.draw(text);
+
+        window.display();
+
+        //1. iterate through the dates and draw a different thing for each date:
+        float f = 120;
+        float f2 = 50;
+
+
+
+        // draw everything here...
+        sf::RectangleShape rectangle(sf::Vector2f(f, f2));
+        window.draw(rectangle);
+        f+=1;
+        if(f == 700)
+            f = 120;
+
+
+        // end the current frame
+        window.display();
+
+    }
 
     return 0;
 }
