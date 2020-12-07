@@ -73,6 +73,7 @@ int partition (vector<Game>& data, int low, int high)
     swap(data[i + 1], data[high]);
     return (i + 1);
 }
+
 vector<Game> quickSort(vector<Game>& data, int low, int high)
 {
     //low = 0, high = size()-1
@@ -100,6 +101,7 @@ void heapify (vector<Game>& data, int i, int len) {
         heapify(data, max, len);
     }
 }
+
 vector<Game> heapSort (vector<Game>& data) {
     int len = data.size();
 
@@ -178,7 +180,7 @@ int main() {
  //   temp = data.getstate("FL");
 
 
-    temp = quickSort(temp, 0, temp.size()-1);
+    temp = heapSort(temp);
 
   // vector<Game> temp = data.getDateCount("6/1/19");
     for(Game& g: temp)
