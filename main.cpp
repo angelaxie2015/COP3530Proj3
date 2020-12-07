@@ -183,11 +183,64 @@ void printText(sf::RenderWindow& window, float x, float y, string str){ //printi
     window.draw(text);
 }
 
-void printBar(sf::RenderWindow& window, float yPos, float width){ //printing bar based on the count of games
+void printBar(sf::RenderWindow& window, float yPos, float width, sf::Color c){ //printing bar based on the count of games
     sf::RectangleShape rectangle(sf::Vector2f(width, 30));
     rectangle.setPosition(500, yPos+5);
+    rectangle.setFillColor(c);
 
     window.draw(rectangle);
+}
+
+float sort(string inputState, int algoNum, Data& data) {
+    vector<Game> givenState = data.getstate(inputState);
+    // Return the sorting time
+    float time = 0;
+
+    // 1. Bubble sort
+    if (algoNum == 1) {
+        clock_t t;
+        t = clock();
+        vector<Game> bubblesortList = bubbleSort(givenState); //sorting using bubble sort
+        t = clock() - t;
+        time = ((float)t)/CLOCKS_PER_SEC;
+    }
+
+        // 2. Insertion sort
+    else if (algoNum == 2) {
+        clock_t t;
+        t = clock();
+        vector<Game> insertionList = insertionSort(givenState);
+        t = clock() - t;
+        time = ((float)t)/CLOCKS_PER_SEC;
+    }
+
+        // 3. Selection sort
+    else if (algoNum == 3) {
+        clock_t t;
+        t = clock();
+        vector<Game> selectionList = selectionSort(givenState);
+        t = clock() - t;
+        time = ((float)t)/CLOCKS_PER_SEC;
+    }
+
+        // 4. Quick sort
+    else if (algoNum == 4) {
+        clock_t t;
+        t = clock();
+        vector<Game> quicklist = quickSort(givenState, 0 , givenState.size() - 1);
+        t = clock() - t;
+        time = ((float)t)/CLOCKS_PER_SEC;
+    }
+
+        // 5. Heap sort
+    else if (algoNum == 5) {
+        clock_t t;
+        t = clock();
+        vector<Game> heapsortList = heapSort(givenState); //sorting using heapsort
+        t = clock() - t;
+        time = ((float)t)/CLOCKS_PER_SEC;
+    }
+    return time;
 }
 
 int main() {
@@ -199,94 +252,115 @@ int main() {
     vector<string> dates;
     loadFile(loc, data, dates);
 
-
-
     //2. sort
-    cout << "Which state do you want to take a look at?" << endl;
+    string inputState, algoNumStr1, algoNumStr2;
+    unordered_map<int, string> m;
+
+    m.emplace(1, "Bubble sort");
+    m.emplace(2, "Insertion sort");
+    m.emplace(3, "Selection sort");
+    m.emplace(4, "Quick sort");
+    m.emplace(5, "Heap sort");
+
+    cout << "Welcome to DaTrend" << endl;
+    cout << "This time, we will be examining the trend for popular video games in the past decade." << endl;
+
+    cout << "Which state do you want to take a look at? (please only type abbreviation)" << endl;
     string state;
     cin >> state;
-/*
+
     vector<Game> givenState = data.getstate(state);
 
-    clock_t t;
-    t = clock();
-    printf ("Calculating...\n");
-    vector<Game> heapsortList = heapSort(givenState); //sorting using heapsort
-    t = clock() - t;
-    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do heap sort." << endl;
+    cout << "Please choose two sorting algorithms you want to use (please only type numbers)" << endl;
+    cout << "1. bubble sort" << endl;
+    cout << "2. insertion sort" << endl;
+    cout << "3. selection sort" << endl;
+    cout << "4. quick sort" << endl;
+    cout << "5. heap sort" << endl;
+    cout << "Please choose the first algorithm" << endl;
+    cin >> algoNumStr1;
+    cout << "Please choose the second algorithm" << endl;
+    cin >> algoNumStr2;
 
-    vector<Game> bubblesortList = bubbleSort(givenState); //sorting using bubble sort
-    t = clock() - t;
-    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do bubble sort." << endl;
+    int algoNum1 = stoi(algoNumStr1);
+    int algoNum2 = stoi(algoNumStr2);
 
-    vector<Game> insertionList = insertionSort(givenState);
-    t = clock() - t;
-    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do insertion sort." << endl;
+    auto t1 = sort(state, algoNum1, data);
+    cout << "It took " << t1 << "s to do " << m[algoNum1] << "." << endl;
 
-    vector<Game> selectionList = selectionSort(givenState);
-    t = clock() - t;
-    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do selection sort." << endl;
+    auto t2 = sort(state, algoNum2, data);
+    cout << "It took " << t2 << "s to do " << m[algoNum2] << "." << endl;
 
-    vector<Game> quicklist = quickSort(givenState, 0 , givenState.size() - 1);
-    t = clock() - t;
-    cout << "It took " << ((float)t)/CLOCKS_PER_SEC << " to do quick sort." << endl;
+    if (t1 > t2)
+        cout << "Quickest sorting algorithm is " << m[algoNum1] << ", and it took " << t1 << "s." << endl;
 
-    cout << "Highes search is " << quicklist[quicklist.size() - 1].gameName << " on " << quicklist[quicklist.size() - 1].date << " with " << quicklist[quicklist.size() - 1].count << " searches." << endl;
+    else if (t1 < t2)
+        cout << "Quickest sorting algorithm is " << m[algoNum2] << ", and it took " << t2 << "s." << endl;
 
-  */
+    else
+        cout << "Both algorithms took the same amount of time." << endl;
 
-    //3. display
-    int width = 2000;
-    int height = 1650;
-    sf::RenderWindow window(sf::VideoMode(width, height), "GoogleTrends");
-
-    window.setFramerateLimit(3); //setting framerate to be slower.
-
-    while (window.isOpen())
-    {
-        // check all the window's events that were triggered since the last iteration of the loop
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            // "close requested" event: we close the window
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        sf::Text text;
-        sf::Font font1;
-        if (!font1.loadFromFile("Aaxiaolongti.ttf"))
-        {
-            cout << "Error" << endl;
-        }
-
-        //1. iterate through the dates and draw a different thing for each date:
-        // draw everything here...
-        for(string& date: dates) {
-            window.clear(sf::Color(34,40,49));
-            text.setString(date);
-            text.setCharacterSize(100);
-            text.setFont(font1);
-            text.setFillColor(sf::Color(232,232,232));
-            text.setStyle(sf::Text::Bold);
-            text.setPosition((width-180.f)/2.f, 10);
-            window.draw(text);
+    cout << "Would you like to see the graphical representation? (yes/no)" << endl;
+    string enter;
+    cin >> enter;
 
 
-            vector<Game> list = data.getStateDateCount(state, date);
-            vector<Game> sorted = heapSort(list); //sorting list based on the given state
+    if(enter == "yes") {
+        //3. display
+        int width = 2000;
+        int height = 1650;
+        sf::RenderWindow window(sf::VideoMode(width, height), "GoogleTrends");
 
-            int yLoc = 130;
+        window.setFramerateLimit(3); //setting framerate to be slower.
 
-            for(int i = sorted.size() - 1; i >= 6; i--){
-                printText(window, 50, yLoc, sorted[i].gameName);
-                printBar(window, yLoc+10, sorted[i].count*13.5 + 1);
-                printText(window,1900, yLoc,to_string(sorted[i].count));
-                yLoc+= 50;
+        while (window.isOpen()) {
+            // check all the window's events that were triggered since the last iteration of the loop
+            sf::Event event;
+            while (window.pollEvent(event)) {
+                // "close requested" event: we close the window
+                if (event.type == sf::Event::Closed)
+                    window.close();
             }
 
-            // end the current frame
-            window.display();
+            sf::Text text;
+            sf::Font font1;
+            if (!font1.loadFromFile("Aaxiaolongti.ttf")) {
+                cout << "Error" << endl;
+            }
+
+            //1. iterate through the dates and draw a different thing for each date:
+            // draw everything here...
+            for (string &date: dates) {
+                window.clear(sf::Color(34, 40, 49));
+                string s = state + " --- " + date;
+                text.setString(s);
+                text.setCharacterSize(100);
+                text.setFont(font1);
+                text.setFillColor(sf::Color(232, 232, 232));
+                text.setStyle(sf::Text::Bold);
+                text.setPosition((width - 400.f) / 2.f, 10);
+                window.draw(text);
+
+
+                vector<Game> list = data.getStateDateCount(state, date);
+                vector<Game> sorted = heapSort(list); //sorting list based on the given state
+
+                int yLoc = 130;
+                int blue = 84;
+                int green = 84;
+
+                for (int i = sorted.size() - 1; i >= 6; i--) {
+                    printText(window, 50, yLoc, sorted[i].gameName);
+                    printBar(window, yLoc + 10, sorted[i].count * 13.5 + 1, sf::Color(240, green, blue));
+                    printText(window, 1900, yLoc, to_string(sorted[i].count));
+                    yLoc += 50;
+                    blue += 5;
+                    green += 5;
+                }
+
+                // end the current frame
+                window.display();
+            }
         }
     }
 
