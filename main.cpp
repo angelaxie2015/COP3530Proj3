@@ -67,13 +67,17 @@ int main() {
     //1. read file and store in an array of games
     loadFile(loc, data);
 
-    vector<Game> temp = data.getstate("FL");
+    vector<Game> temp = data.getDate("6/1/19");
     for(Game& g: temp)
         g.print();
 
     //2. use a map to match index with game name & have a vector of counts
 
     //3. sort
+
+    //4. display
+    sf::RenderWindow window(sf::VideoMode(800, 600), "GoogleTrends");
+
 
 
 
