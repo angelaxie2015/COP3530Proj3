@@ -165,6 +165,31 @@ void loadFile(const string fileName, Data& d, vector<string>& dates){ //reading 
     }
 }
 
+void printText(sf::RenderWindow& window, float y, string str){ //printing the name of the ranking games
+    sf::Text text;
+    sf::Font font;
+
+    if (!font.loadFromFile("Aaweiweidianzhenti.ttf")) //checking whether font is correctly loaded.
+    {
+        cout << "Error" << endl;
+    }
+
+    text.setString(str);
+    text.setCharacterSize(40);
+    text.setFont(font);
+    text.setColor(sf::Color::White);
+    text.setPosition(50,y);
+
+    window.draw(text);
+}
+
+void printBar(sf::RenderWindow& window, float yPos, float width){
+    sf::RectangleShape rectangle(sf::Vector2f(width, 70));
+    rectangle.setPosition(500, yPos);
+    sf::RectangleShape rectBack(sf::Vector2f(1000,20));
+    rectBack.setPosition(500, yPos+20);
+    window.draw(rectangle);
+}
 
 int main() {
     //std::cout << "Hello, World!" << std::endl;
@@ -176,12 +201,12 @@ int main() {
     loadFile(loc, data, dates);
 
 
-    /*
+
     //2. sort
     cout << "Which state do you want to take a look at?" << endl;
     string state;
     cin >> state;
-
+/*
     vector<Game> givenState = data.getstate(state);
 
     clock_t t;
@@ -209,12 +234,14 @@ int main() {
 
     cout << "Highes search is " << quicklist[quicklist.size() - 1].gameName << " on " << quicklist[quicklist.size() - 1].date << " with " << quicklist[quicklist.size() - 1].count << " searches." << endl;
 
-     */
+  */
 
     //3. display
-    sf::RenderWindow window(sf::VideoMode(800, 600), "GoogleTrends");
+    int width = 2000;
+    int height = 1650;
+    sf::RenderWindow window(sf::VideoMode(width, height), "GoogleTrends");
 
-    window.setFramerateLimit(10); //setting framerate to be slower.
+    window.setFramerateLimit(3); //setting framerate to be slower.
 
     while (window.isOpen())
     {
@@ -227,44 +254,37 @@ int main() {
                 window.close();
         }
 
-        // clear the window with black color
-        //sf::Color color = d0e8f2;
-        window.clear(sf::Color::Black);
-
         sf::Text text;
-        sf::Font font;
-        if (!font.loadFromFile("1574926762.ttf"))
+        sf::Font font1;
+        if (!font1.loadFromFile("1574926762.ttf"))
         {
             cout << "Error" << endl;
         }
 
-        text.setString("Hello World");
-        text.setFont(font);
-        text.setCharacterSize(20);
-        text.setStyle(sf::Text::Bold);
-        text.setColor(sf::Color::White);
-        text.setPosition(50,50);
-        window.draw(text);
-
-        window.display();
-
         //1. iterate through the dates and draw a different thing for each date:
-        float f = 120;
-        float f2 = 50;
-
-
-
         // draw everything here...
-        sf::RectangleShape rectangle(sf::Vector2f(f, f2));
-        window.draw(rectangle);
-        f+=1;
-        if(f == 700)
-            f = 120;
+        for(string& date: dates) {
+            window.clear(sf::Color::Black);
+            text.setString(date);
+            text.setCharacterSize(100);
+            text.setFont(font1);
+            text.setStyle(sf::Text::Bold);
+            window.draw(text);
+
+            vector<Game> list = data.getStateDateCount(state, date);
+            vector<Game> sorted = heapSort(list); //sorting list based on the given state
+
+            int yLoc = 130;
+            for(int i = sorted.size() - 1; i >= 6; i--){
+                printText(window, yLoc, sorted[i].gameName);
+                printBar(window, yLoc, sorted[i].count*20.5);
+                yLoc+= 50;
+            }
 
 
-        // end the current frame
-        window.display();
-
+            // end the current frame
+            window.display();
+        }
     }
 
     return 0;
