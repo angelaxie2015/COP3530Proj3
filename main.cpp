@@ -3,9 +3,64 @@
 #include "Data.h"
 #include <string>
 #include <fstream>
+#include <vector>
 using namespace std;
 
+int partition (vector<int>& data, int low, int high)
+{
+    int pivot = data[high];
+    int i = (low - 1);
 
+    for (int j = low; j <= high - 1; j++){
+        if (data[j] < pivot){
+            i++;
+            swap(data[i], data[j]);
+        }
+    }
+
+    swap(data[i + 1], data[high]);
+    return (i + 1);
+}
+vector<int> quickSort(vector<int>& data, int low, int high)
+{
+    //low = 0, high = size()-1
+    if (low < high){
+        int pivot = partition(data, low, high);
+        quickSort(data, low, pivot - 1);
+        quickSort(data, pivot + 1, high);
+    }
+    return data;
+}
+
+void heapify (vector<int>& data, int i, int len) {
+    int max = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+
+    if (left < len && data[left] > data[max])
+        max = left;
+
+    if (right < len && data[right] > data[max])
+        max = right;
+
+    if (max != i){
+        swap(data[i], data[max]);
+        heapify(data, max, len);
+    }
+}
+vector<int> heapSort (vector<int>& data) {
+    int len = data.size();
+
+    for(int i = (data.size() - 1) / 2; i >= 0; i--)
+        heapify(data, i, data.size());
+
+    for(int i = data.size() - 1; i >= 1; i--) {
+        swap(data[0],data[i]);
+        len--;
+        heapify(data, 0, len);
+    }
+    return data;
+}
 
 void loadFile(const string fileName, Data& d){ //reading the file and inserting it into Data
     ifstream file;

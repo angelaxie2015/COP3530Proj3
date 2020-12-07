@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/COP3530Proj3.dir/Data.cpp.o"
+  "CMakeFiles/COP3530Proj3.dir/Game.cpp.o"
   "CMakeFiles/COP3530Proj3.dir/main.cpp.o"
   "COP3530Proj3"
   "COP3530Proj3.pdb"
