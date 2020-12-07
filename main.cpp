@@ -165,7 +165,7 @@ void loadFile(const string fileName, Data& d, vector<string>& dates){ //reading 
     }
 }
 
-void printText(sf::RenderWindow& window, float y, string str){ //printing the name of the ranking games
+void printText(sf::RenderWindow& window, float x, float y, string str){ //printing the name of the ranking games
     sf::Text text;
     sf::Font font;
 
@@ -178,16 +178,15 @@ void printText(sf::RenderWindow& window, float y, string str){ //printing the na
     text.setCharacterSize(40);
     text.setFont(font);
     text.setColor(sf::Color::White);
-    text.setPosition(50,y);
+    text.setPosition(x,y);
 
     window.draw(text);
 }
 
-void printBar(sf::RenderWindow& window, float yPos, float width){
-    sf::RectangleShape rectangle(sf::Vector2f(width, 70));
-    rectangle.setPosition(500, yPos);
-    sf::RectangleShape rectBack(sf::Vector2f(1000,20));
-    rectBack.setPosition(500, yPos+20);
+void printBar(sf::RenderWindow& window, float yPos, float width){ //printing bar based on the count of games
+    sf::RectangleShape rectangle(sf::Vector2f(width, 30));
+    rectangle.setPosition(500, yPos+5);
+
     window.draw(rectangle);
 }
 
@@ -256,7 +255,7 @@ int main() {
 
         sf::Text text;
         sf::Font font1;
-        if (!font1.loadFromFile("1574926762.ttf"))
+        if (!font1.loadFromFile("Aaxiaolongti.ttf"))
         {
             cout << "Error" << endl;
         }
@@ -264,23 +263,27 @@ int main() {
         //1. iterate through the dates and draw a different thing for each date:
         // draw everything here...
         for(string& date: dates) {
-            window.clear(sf::Color::Black);
+            window.clear(sf::Color(34,40,49));
             text.setString(date);
             text.setCharacterSize(100);
             text.setFont(font1);
+            text.setFillColor(sf::Color(232,232,232));
             text.setStyle(sf::Text::Bold);
+            text.setPosition((width-180.f)/2.f, 10);
             window.draw(text);
+
 
             vector<Game> list = data.getStateDateCount(state, date);
             vector<Game> sorted = heapSort(list); //sorting list based on the given state
 
             int yLoc = 130;
+
             for(int i = sorted.size() - 1; i >= 6; i--){
-                printText(window, yLoc, sorted[i].gameName);
-                printBar(window, yLoc, sorted[i].count*20.5);
+                printText(window, 50, yLoc, sorted[i].gameName);
+                printBar(window, yLoc+10, sorted[i].count*13.5 + 1);
+                printText(window,1900, yLoc,to_string(sorted[i].count));
                 yLoc+= 50;
             }
-
 
             // end the current frame
             window.display();
