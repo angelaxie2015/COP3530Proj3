@@ -6,13 +6,13 @@
 #include <vector>
 using namespace std;
 
-int partition (vector<int>& data, int low, int high)
+int partition (vector<Game>& data, int low, int high)
 {
-    int pivot = data[high];
+    int pivot = data[high].count;
     int i = (low - 1);
 
     for (int j = low; j <= high - 1; j++){
-        if (data[j] < pivot){
+        if (data[j].count < pivot){
             i++;
             swap(data[i], data[j]);
         }
@@ -21,7 +21,7 @@ int partition (vector<int>& data, int low, int high)
     swap(data[i + 1], data[high]);
     return (i + 1);
 }
-vector<int> quickSort(vector<int>& data, int low, int high)
+vector<Game> quickSort(vector<Game>& data, int low, int high)
 {
     //low = 0, high = size()-1
     if (low < high){
@@ -32,15 +32,15 @@ vector<int> quickSort(vector<int>& data, int low, int high)
     return data;
 }
 
-void heapify (vector<int>& data, int i, int len) {
+void heapify (vector<Game>& data, int i, int len) {
     int max = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
 
-    if (left < len && data[left] > data[max])
+    if (left < len && data[left].count > data[max].count)
         max = left;
 
-    if (right < len && data[right] > data[max])
+    if (right < len && data[right].count > data[max].count)
         max = right;
 
     if (max != i){
@@ -48,7 +48,7 @@ void heapify (vector<int>& data, int i, int len) {
         heapify(data, max, len);
     }
 }
-vector<int> heapSort (vector<int>& data) {
+vector<Game> heapSort (vector<Game>& data) {
     int len = data.size();
 
     for(int i = (data.size() - 1) / 2; i >= 0; i--)
