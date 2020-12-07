@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/COP3530Proj3.dir/main.cpp.o  -o COP3530Proj3 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/COP3530Proj3.dir/Data.cpp.o CMakeFiles/COP3530Proj3.dir/Game.cpp.o CMakeFiles/COP3530Proj3.dir/main.cpp.o  -o COP3530Proj3 

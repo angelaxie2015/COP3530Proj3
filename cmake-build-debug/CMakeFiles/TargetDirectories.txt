@@ -1,3 +1,3 @@
-/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles/Minesweeper.dir
+/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/COP3530Proj3.dir

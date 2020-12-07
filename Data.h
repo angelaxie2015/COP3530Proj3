@@ -12,7 +12,8 @@ public:
     void insert(Game g);
     vector<Game> getstate(string stateName);
     vector<Game> getDate(string date);
-    vector<pair<string, Game>> getDateCount(vector<Game>& games, string date);
+    vector<Game> getDateCount(string date);
+
 
 
 

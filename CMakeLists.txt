@@ -1,15 +1,13 @@
-cmake_minimum_required(VERSION 3.2)
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+cmake_minimum_required(VERSION 3.15)
 project(COP3530Proj3)
 
-## If you want to link SFML statically
-# set(SFML_STATIC_LIBRARIES TRUE)
+set(CMAKE_CXX_STANDARD 14)
 
-## In most cases better set in the CMake cache
-# set(SFML_DIR "<sfml root prefix>/lib/cmake/SFML")
+include_directories(.)
 
-find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
-add_executable(Minesweeper main.cpp Game.cpp Game.h Data.cpp Data.h)
-target_link_libraries(Minesweeper sfml-graphics sfml-audio)
+add_executable(COP3530Proj3
+        Data.cpp
+        Data.h
+        Game.cpp
+        Game.h
+        main.cpp)

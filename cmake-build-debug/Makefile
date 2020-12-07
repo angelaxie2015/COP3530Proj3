@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/angelaxie/CLionProjects/COP3530Proj3
+CMAKE_SOURCE_DIR = /Users/sun/Desktop/p3/COP3530Proj3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Minesweeper
+# Target rules for targets named COP3530Proj3
 
 # Build rule for target.
-Minesweeper: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Minesweeper
-.PHONY : Minesweeper
+COP3530Proj3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 COP3530Proj3
+.PHONY : COP3530Proj3
 
 # fast build rule for target.
-Minesweeper/fast:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/build
-.PHONY : Minesweeper/fast
+COP3530Proj3/fast:
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/build
+.PHONY : COP3530Proj3/fast
 
 Data.o: Data.cpp.o
 
@@ -129,7 +129,7 @@ Data.o: Data.cpp.o
 
 # target to build an object file
 Data.cpp.o:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Data.cpp.o
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/Data.cpp.o
 .PHONY : Data.cpp.o
 
 Data.i: Data.cpp.i
@@ -138,7 +138,7 @@ Data.i: Data.cpp.i
 
 # target to preprocess a source file
 Data.cpp.i:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Data.cpp.i
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/Data.cpp.i
 .PHONY : Data.cpp.i
 
 Data.s: Data.cpp.s
@@ -147,7 +147,7 @@ Data.s: Data.cpp.s
 
 # target to generate assembly for a file
 Data.cpp.s:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Data.cpp.s
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/Data.cpp.s
 .PHONY : Data.cpp.s
 
 Game.o: Game.cpp.o
@@ -156,7 +156,7 @@ Game.o: Game.cpp.o
 
 # target to build an object file
 Game.cpp.o:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Game.cpp.o
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/Game.cpp.o
 .PHONY : Game.cpp.o
 
 Game.i: Game.cpp.i
@@ -165,7 +165,7 @@ Game.i: Game.cpp.i
 
 # target to preprocess a source file
 Game.cpp.i:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Game.cpp.i
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/Game.cpp.i
 .PHONY : Game.cpp.i
 
 Game.s: Game.cpp.s
@@ -174,7 +174,7 @@ Game.s: Game.cpp.s
 
 # target to generate assembly for a file
 Game.cpp.s:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/Game.cpp.s
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
 main.o: main.cpp.o
@@ -183,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Minesweeper.dir/build.make CMakeFiles/Minesweeper.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/COP3530Proj3.dir/build.make CMakeFiles/COP3530Proj3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -212,7 +212,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Minesweeper"
+	@echo "... COP3530Proj3"
 	@echo "... Data.o"
 	@echo "... Data.i"
 	@echo "... Data.s"

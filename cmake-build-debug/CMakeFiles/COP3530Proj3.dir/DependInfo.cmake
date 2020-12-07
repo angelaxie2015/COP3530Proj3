@@ -4,12 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/angelaxie/CLionProjects/COP3530Proj3/main.cpp" "/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles/COP3530Proj3.dir/main.cpp.o"
+  "/Users/sun/Desktop/p3/COP3530Proj3/Data.cpp" "/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/COP3530Proj3.dir/Data.cpp.o"
+  "/Users/sun/Desktop/p3/COP3530Proj3/Game.cpp" "/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/COP3530Proj3.dir/Game.cpp.o"
+  "/Users/sun/Desktop/p3/COP3530Proj3/main.cpp" "/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/COP3530Proj3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../."
   )
 
 # Targets to which this target links.

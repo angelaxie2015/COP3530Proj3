@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/angelaxie/CLionProjects/COP3530Proj3
+CMAKE_SOURCE_DIR = /Users/sun/Desktop/p3/COP3530Proj3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Minesweeper.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/Minesweeper.dir/flags.make
 
 CMakeFiles/Minesweeper.dir/main.cpp.o: CMakeFiles/Minesweeper.dir/flags.make
 CMakeFiles/Minesweeper.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Minesweeper.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Minesweeper.dir/main.cpp.o -c /Users/angelaxie/CLionProjects/COP3530Proj3/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Minesweeper.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Minesweeper.dir/main.cpp.o -c /Users/sun/Desktop/p3/COP3530Proj3/main.cpp
 
 CMakeFiles/Minesweeper.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Minesweeper.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angelaxie/CLionProjects/COP3530Proj3/main.cpp > CMakeFiles/Minesweeper.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sun/Desktop/p3/COP3530Proj3/main.cpp > CMakeFiles/Minesweeper.dir/main.cpp.i
 
 CMakeFiles/Minesweeper.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Minesweeper.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angelaxie/CLionProjects/COP3530Proj3/main.cpp -o CMakeFiles/Minesweeper.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sun/Desktop/p3/COP3530Proj3/main.cpp -o CMakeFiles/Minesweeper.dir/main.cpp.s
 
 CMakeFiles/Minesweeper.dir/Game.cpp.o: CMakeFiles/Minesweeper.dir/flags.make
 CMakeFiles/Minesweeper.dir/Game.cpp.o: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Minesweeper.dir/Game.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Minesweeper.dir/Game.cpp.o -c /Users/angelaxie/CLionProjects/COP3530Proj3/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Minesweeper.dir/Game.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Minesweeper.dir/Game.cpp.o -c /Users/sun/Desktop/p3/COP3530Proj3/Game.cpp
 
 CMakeFiles/Minesweeper.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Minesweeper.dir/Game.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angelaxie/CLionProjects/COP3530Proj3/Game.cpp > CMakeFiles/Minesweeper.dir/Game.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sun/Desktop/p3/COP3530Proj3/Game.cpp > CMakeFiles/Minesweeper.dir/Game.cpp.i
 
 CMakeFiles/Minesweeper.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Minesweeper.dir/Game.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angelaxie/CLionProjects/COP3530Proj3/Game.cpp -o CMakeFiles/Minesweeper.dir/Game.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sun/Desktop/p3/COP3530Proj3/Game.cpp -o CMakeFiles/Minesweeper.dir/Game.cpp.s
 
 CMakeFiles/Minesweeper.dir/Data.cpp.o: CMakeFiles/Minesweeper.dir/flags.make
 CMakeFiles/Minesweeper.dir/Data.cpp.o: ../Data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Minesweeper.dir/Data.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Minesweeper.dir/Data.cpp.o -c /Users/angelaxie/CLionProjects/COP3530Proj3/Data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Minesweeper.dir/Data.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Minesweeper.dir/Data.cpp.o -c /Users/sun/Desktop/p3/COP3530Proj3/Data.cpp
 
 CMakeFiles/Minesweeper.dir/Data.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Minesweeper.dir/Data.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angelaxie/CLionProjects/COP3530Proj3/Data.cpp > CMakeFiles/Minesweeper.dir/Data.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sun/Desktop/p3/COP3530Proj3/Data.cpp > CMakeFiles/Minesweeper.dir/Data.cpp.i
 
 CMakeFiles/Minesweeper.dir/Data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Minesweeper.dir/Data.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angelaxie/CLionProjects/COP3530Proj3/Data.cpp -o CMakeFiles/Minesweeper.dir/Data.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sun/Desktop/p3/COP3530Proj3/Data.cpp -o CMakeFiles/Minesweeper.dir/Data.cpp.s
 
 # Object files for target Minesweeper
 Minesweeper_OBJECTS = \
@@ -114,7 +114,7 @@ Minesweeper: /usr/local/lib/libsfml-audio.2.5.1.dylib
 Minesweeper: /usr/local/lib/libsfml-window.2.5.1.dylib
 Minesweeper: /usr/local/lib/libsfml-system.2.5.1.dylib
 Minesweeper: CMakeFiles/Minesweeper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Minesweeper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Minesweeper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Minesweeper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +127,6 @@ CMakeFiles/Minesweeper.dir/clean:
 .PHONY : CMakeFiles/Minesweeper.dir/clean
 
 CMakeFiles/Minesweeper.dir/depend:
-	cd /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/angelaxie/CLionProjects/COP3530Proj3 /Users/angelaxie/CLionProjects/COP3530Proj3 /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug /Users/angelaxie/CLionProjects/COP3530Proj3/cmake-build-debug/CMakeFiles/Minesweeper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sun/Desktop/p3/COP3530Proj3 /Users/sun/Desktop/p3/COP3530Proj3 /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug /Users/sun/Desktop/p3/COP3530Proj3/cmake-build-debug/CMakeFiles/Minesweeper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Minesweeper.dir/depend
 
