@@ -13,6 +13,7 @@ public:
     vector<Game> getstate(string stateName);
     vector<Game> getDate(string date);
     vector<Game> getDateCount(string date);
+    vector<Game> getStateDateCount(string state, string date);
 
 
 

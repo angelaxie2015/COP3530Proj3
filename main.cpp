@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <queue>
 using namespace std;
 
 int partition (vector<Game>& data, int low, int high)
@@ -122,11 +123,16 @@ int main() {
     //1. read file and store in an array of games
     loadFile(loc, data);
 
-   // vector<Game> temp = data.getDate("6/1/19");
+    vector<Game> temp = data.getStateDateCount("FL", "9/1/11");
+ //   temp = data.getstate("FL");
 
-    vector<Game> temp = data.getDateCount("6/1/19");
+
+    temp = quickSort(temp, 0, temp.size()-1);
+
+  // vector<Game> temp = data.getDateCount("6/1/19");
     for(Game& g: temp)
         g.print();
+
 
     //2. use a map to match index with game name & have a vector of counts
 
@@ -134,11 +140,6 @@ int main() {
 
     //4. display
     sf::RenderWindow window(sf::VideoMode(800, 600), "GoogleTrends");
-
-
-
-
-
 
     return 0;
 }
