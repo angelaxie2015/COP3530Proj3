@@ -25,7 +25,7 @@ vector<Game> Data::getDate(string date) {
 }
 
 vector<Game> Data::getDateCount(string date) {
-    vector<Game> list = getDate(data);
+    vector<Game> list = getDate(date);
     vector<Game> ans;
     unordered_map<string, int> m;
 
@@ -33,7 +33,7 @@ vector<Game> Data::getDateCount(string date) {
         m[game.gameName] += game.count;
     }
 
-    for(auto& iter: map){
+    for(auto& iter: m){
         Game temp(iter.first, "TEMP", date, iter.second);
         ans.push_back(temp);
     }

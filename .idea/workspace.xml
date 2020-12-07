@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="COP3530Proj3" targetName="Minesweeper" />
+      <config projectName="COP3530Proj3" targetName="COP3530Proj3" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4bfd39c3-8c68-4774-a84a-6540a19b1d73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Data.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data.h" afterDir="false" />
@@ -57,6 +58,9 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
 >>>>>>> 470c110a337ae84365f96e98eb37e2a2d82435c0
+=======
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+>>>>>>> f3ef84744673fa9179a0382badf28d8f9cf0ec07
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +122,11 @@
 =======
       <workItem from="1607261616811" duration="3860000" />
       <workItem from="1607304185076" duration="10000" />
+<<<<<<< HEAD
 >>>>>>> 470c110a337ae84365f96e98eb37e2a2d82435c0
+=======
+      <workItem from="1607304523008" duration="511000" />
+>>>>>>> f3ef84744673fa9179a0382badf28d8f9cf0ec07
     </task>
     <servers />
   </component>

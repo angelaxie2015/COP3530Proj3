@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/angelaxie/CLionProjects/COP3530Proj3/Data.cpp
+Data.h
+/Users/angelaxie/CLionProjects/COP3530Proj3/Data.h
+
+/Users/angelaxie/CLionProjects/COP3530Proj3/Data.h
+Game.h
+/Users/angelaxie/CLionProjects/COP3530Proj3/Game.h
+unordered_map
+-
+
+/Users/angelaxie/CLionProjects/COP3530Proj3/Game.h
+iostream
+/Users/angelaxie/CLionProjects/COP3530Proj3/iostream
+string
+/Users/angelaxie/CLionProjects/COP3530Proj3/string
+unordered_map
+/Users/angelaxie/CLionProjects/COP3530Proj3/unordered_map
+vector
+/Users/angelaxie/CLionProjects/COP3530Proj3/vector
+
