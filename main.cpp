@@ -6,6 +6,58 @@
 #include <vector>
 using namespace std;
 
+vector<Game> bubbleSort(vector<Game> targetVec) {
+    vector<Game> res = targetVec;
+
+    for (int i = 0; i < res.size() - 1; i++) {
+        int swapped = 0;
+
+        for (int j = 0; j < res.size() - i - 1; ++j) {
+            if (res[j].count > res[j + 1].count) {
+                swap(res[j], res[j + 1]);
+                swapped = 1;
+            }
+        }
+
+        if (swapped == 0)
+            break;
+    }
+    return res;
+}
+
+vector<Game> insertionSort(vector<Game> targetVec) {
+    vector<Game> res = targetVec;
+
+    for (int i = 1; i < res.size(); i++) {
+        Game key = res[i];
+        int keyCount = key.count;
+
+        int j = i - 1;
+
+        while (keyCount < res[j].count && j >= 0) {
+            res[j + 1] = res[j];
+            j--;
+        }
+        res[j + 1] = key;
+    }
+    return res;
+}
+
+vector<Game> selectionSort(vector<Game> targetVec) {
+    vector<Game> res = targetVec;
+
+    for (int i = 0; i < res.size() - 1; i++) {
+        int min_index = i;
+
+        for (int j = i + 1; j < res.size(); j++) {
+            if (res[j].count < res[min_index].count)
+                min_index = j;
+        }
+        swap(res[min_index], res[i]);
+    }
+    return res;
+}
+
 int partition (vector<Game>& data, int low, int high)
 {
     int pivot = data[high].count;
